@@ -261,13 +261,14 @@ background:linear-gradient(
 }
 
 .main-layout{
-display:grid;
-grid-template-columns:500px 1fr;
-gap:30px;
-padding:40px;
-align-items:start;
-max-width:1500px;
-margin:auto;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px;
+  align-items: start;
+  max-width: 1500px;
+  margin: auto;
+  transition: all 0.4s ease;
 }
 
 .report-box{
@@ -338,15 +339,24 @@ height:350px;
  font-size: large;
 }
 .left{
-  flex:1;
-    display:flex;
-    flex-direction:column;
-    gap:25px;
-    width: 500px;
+   width: 500px;
+  transition: all 0.4s ease;
 }
 .right{
-   width:100%;
-   min-width:0;
+width: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: width 0.4s ease, opacity 0.4s ease;
+  flex-shrink: 0;
+}
+.main-layout.analyzed {
+  justify-content: flex-start;
+}
+.main-layout.analyzed .right {
+  width: 100%;
+  min-width: 0;
+  opacity: 1;
+  flex: 1;
 }
 
 .insight-btns{

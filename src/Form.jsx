@@ -55,7 +55,7 @@ function prevInsight(){
 }
     return (
         <>
-        <div className="main-layout">
+        <div className={`main-layout ${tf ? "analyzed" : ""}`}>
             <div className="left">
         <form  className="user-input" onSubmit={toggle}> 
             <div className="form-box">
@@ -159,7 +159,8 @@ function prevInsight(){
 </div>
     </div>
 </div>
-{  tf &&  <Calculation className="right"
+<div className={`right ${tf ? "analyzed-right" : ""}`}>
+    {tf && <Calculation
         name={startupName}
         fund={fundRaised}
         burn={burnRate}
@@ -167,8 +168,8 @@ function prevInsight(){
         inv={employee}
         coffee={coffee}
         sleep={founderSleep}
-    />
-}
+    />}
+</div>
 
     </div>
         </>
