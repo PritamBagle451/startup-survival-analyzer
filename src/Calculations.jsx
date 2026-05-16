@@ -134,11 +134,11 @@ function burnStatus(){
         </div>
         <div className="chart-box">
 
-  <PieChart width={340} height={340}>
+  <PieChart width={280} height={280}>
       <Pie
           data={data}
           dataKey="value"
-       outerRadius={90}
+       outerRadius={75}
        fill="#8884d8"
        label
    >
