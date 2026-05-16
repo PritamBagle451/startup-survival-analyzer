@@ -261,12 +261,13 @@ background:linear-gradient(
 }
 
 .main-layout{
-  display: flex;
-  gap:30px;
-  align-items: flex-start;
-  justify-content: center;
-  padding:40px;
-  flex-wrap: wrap;
+display:grid;
+grid-template-columns:500px 1fr;
+gap:30px;
+padding:40px;
+align-items:start;
+max-width:1500px;
+margin:auto;
 }
 
 .report-box{
@@ -341,11 +342,11 @@ height:350px;
     display:flex;
     flex-direction:column;
     gap:25px;
-    max-width: 500px;
+    width: 500px;
 }
 .right{
-    flex:1;
-    max-width:900px;
+   width:100%;
+   min-width:0;
 }
 
 .insight-btns{
