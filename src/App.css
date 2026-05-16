@@ -293,7 +293,7 @@ border-radius:24px;
 }
 
 .report-con{
-width: 100%;
+  flex:1;
     max-width:850px;
   overflow: hidden; 
   min-height: 750px;
@@ -340,9 +340,11 @@ width: 100%;
  font-size: large;
 }
 .left{
+  flex:1;
     display:flex;
     flex-direction:column;
     gap:25px;
+    max-width: 500px;
 }
 .right{
     flex:1;
