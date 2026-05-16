@@ -262,6 +262,7 @@ background:linear-gradient(
 }
 
 .main-layout{
+  width:100%;
    display: flex;
   flex-direction: row;        
   justify-content: space-between;
@@ -271,6 +272,7 @@ background:linear-gradient(
   max-width: 1500px;
   margin: auto;
   transition: width 0.5s ease, opacity 0.5s ease;
+  box-sizing: border-box;
 }
 
 .report-box{
@@ -341,6 +343,8 @@ height:350px;
  font-size: large;
 }
 .left{
+  min-width: 500px;
+  flex-shrink: 0;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -349,13 +353,17 @@ height:350px;
   align-items: center;
    width: 500px;
   transition: all 0.4s ease;
+  gap: 25px;
+  flex-shrink: 0;
 }
 .right{
+  flex:0;
 width: 0;
+min-width: 0;
   overflow: hidden;
   opacity: 0;
   transition: width 0.4s ease, opacity 0.4s ease;
-  flex-shrink: 0;
+  
 }
 .main-layout.analyzed {
   justify-content: flex-start;
